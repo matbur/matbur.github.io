@@ -82,7 +82,7 @@
 </section><section data-id="dfb8a24586cbf5a99f40f8c59e9ea170"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 136px; height: auto;" data-block-id="096b80de41c3dd81dcbe195f5e249320"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Połączenie z bazą danych</h2>
 </div></div>
-<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 692px; height: 300px; left: 134px; top: 270px;" data-block-id="33b9e584e2576e5f204b57f02ee6bb1a"><div class="sl-block-content" style="z-index: 12; border-width: 1px; font-size: 150%;" data-highlight-theme="github-gist"><pre class="python"><code>&gt;&gt;&gt; from sqlalchemy import (
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 692px; height: 300px; left: 134px; top: 270px;" data-block-id="33b9e584e2576e5f204b57f02ee6bb1a"><div class="sl-block-content" style="z-index: 0; border-width: 1px; font-size: 150%;" data-highlight-theme="ascetic"><pre class="python"><code>&gt;&gt;&gt; from sqlalchemy import (
 ...     create_engine)
 
 
@@ -91,7 +91,7 @@
 ...     '//user:password@host:port/dbname')</code></pre></div></div></section><section data-id="610a99bb98018c5ba5ca2ba4e47195d4"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 44px; height: auto;" data-block-id="351a65e3029395b53ec499977c2eab3d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Definiowanie tabel</h2>
 </div></div>
-<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 640px; height: 280px; left: 160px; top: 140px;" data-block-id="726d86640afef5f9352be0a0e4a58f9a"><div class="sl-block-content" style="z-index: 12; border-width: 1px; font-size: 130%;" data-highlight-theme="github-gist"><pre class="python"><code>&gt;&gt;&gt; from sqlalchemy.ext.declarative import (
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 640px; height: 280px; left: 160px; top: 140px;" data-block-id="726d86640afef5f9352be0a0e4a58f9a"><div class="sl-block-content" style="z-index: 12; border-width: 1px; font-size: 130%;" data-highlight-theme="ascetic"><pre class="python"><code>&gt;&gt;&gt; from sqlalchemy.ext.declarative import (
 ...     declarative_base)
 
 &gt;&gt;&gt; from sqlalchemy import Column, Integer, Text
@@ -101,23 +101,23 @@
 ...     __tablename__ = 'users'
 ...     id = Column(Integer, primary_key=True)
 ...     name = Column(Text)</code></pre></div></div>
-<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 400px; height: 140px; left: 240px; top: 490px;" data-block-id="4eccc3c232f15cb8f232e951f5702392"><div class="sl-block-content" style="z-index: 13; font-size: 130%;" data-highlight-theme="github-gist"><pre class="sql"><code>CREATE TABLE users (
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 400px; height: 140px; left: 240px; top: 490px;" data-block-id="4eccc3c232f15cb8f232e951f5702392"><div class="sl-block-content" style="z-index: 13; font-size: 130%;" data-highlight-theme="ascetic"><pre class="sql"><code>CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     name TEXT
 );</code></pre></div></div></section><section data-id="01d913cc8eb6810724f9146fad414523"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 136px; height: auto;" data-block-id="22fa162e7233c9a7f5853d08aa6e71d5"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Tworzenie sesji</h2>
 </div></div>
-<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 641px; height: 197px; left: 153px; top: 293px;" data-block-id="985437a2b51b5f0fc1fd1c325ef5f805"><div class="sl-block-content" style="z-index: 12; border-width: 1px; font-size: 150%;" data-highlight-theme="github-gist"><pre class="python"><code>&gt;&gt;&gt; from sqlalchemy.orm import (
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 641px; height: 197px; left: 153px; top: 293px;" data-block-id="985437a2b51b5f0fc1fd1c325ef5f805"><div class="sl-block-content" style="z-index: 12; border-width: 1px; font-size: 150%;" data-highlight-theme="ascetic"><pre class="python"><code>&gt;&gt;&gt; from sqlalchemy.orm import (
 ...     sessionmaker)
 
 &gt;&gt;&gt; Session = sessionmaker(bind=engine)
 &gt;&gt;&gt; session = Session()</code></pre></div></div></section><section data-id="6e5ac820f5e942b43cbc35798ba301b5"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 136px; height: auto;" data-block-id="4c2864330e26968d9efd77c1c5f122e3"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui"><h2>Tworzenie obiektów</h2></div></div>
-<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 641px; height: 124px; left: 160px; top: 271px;" data-block-id="9232fc0375d39fac129dc777f3764692"><div class="sl-block-content" style="z-index: 12; border-width: 1px; font-size: 150%;" data-highlight-theme="github-gist"><pre class="python"><code>&gt;&gt;&gt; new_user = User(name='jan')
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 641px; height: 124px; left: 160px; top: 271px;" data-block-id="9232fc0375d39fac129dc777f3764692"><div class="sl-block-content" style="z-index: 12; border-width: 1px; font-size: 150%;" data-highlight-theme="ascetic"><pre class="python"><code>&gt;&gt;&gt; new_user = User(name='jan')
 
 &gt;&gt;&gt; session.add(new_user)</code></pre></div></div></section><section data-id="0de23735cd36451fdee8a2227068d52c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 136px; height: auto;" data-block-id="c7352a095f345dca18d2ab60438cdd62"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Odpytywanie bazy</h2>
 </div></div>
-<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 641px; height: 173px; left: 160px; top: 270px;" data-block-id="6f1e7e49d2fc0e1b93a6a06e2da87b85"><div class="sl-block-content" style="z-index: 12; border-width: 1px; font-size: 150%;" data-highlight-theme="github-gist"><pre class="python"><code>&gt;&gt;&gt; users = session.query(User).\
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 641px; height: 173px; left: 160px; top: 270px;" data-block-id="6f1e7e49d2fc0e1b93a6a06e2da87b85"><div class="sl-block-content" style="z-index: 12; border-width: 1px; font-size: 150%;" data-highlight-theme="ascetic"><pre class="python"><code>&gt;&gt;&gt; users = session.query(User).\
 ...     filter_by(name='jan')
 
 &gt;&gt;&gt; list(users)
@@ -126,12 +126,12 @@
 
 <p>i zatwierdzanie zmian</p>
 </div></div>
-<div class="sl-block" data-block-type="code" style="width: 641px; height: 103px; left: 160px; top: 317px;" data-block-id="e5992dad51115ac477e5c5e7b449c3a6"><div class="sl-block-content" style="z-index: 12; border-width: 1px; font-size: 150%;" data-highlight-theme="github-gist"><pre class="python"><code>&gt;&gt;&gt; users[0].name = 'jasiek'
+<div class="sl-block" data-block-type="code" style="width: 641px; height: 103px; left: 160px; top: 317px;" data-block-id="e5992dad51115ac477e5c5e7b449c3a6"><div class="sl-block-content" style="z-index: 12; border-width: 1px; font-size: 150%;" data-highlight-theme="ascetic"><pre class="python"><code>&gt;&gt;&gt; users[0].name = 'jasiek'
 
 &gt;&gt;&gt; session.commit()</code></pre></div></div></section><section data-id="37b1e9b1a0dfa7190cd09b44905060e0"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 161px; height: auto;" data-block-id="133d702c7d65eee69f4dad2a17cbb75a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
 <h2>Usuwanie danych</h2>
 </div></div>
-<div class="sl-block" data-block-type="code" style="width: 641px; height: 173px; left: 160px; top: 317px;" data-block-id="9f90b2399bfca3529fa35abdc9da5bd7"><div class="sl-block-content" style="z-index: 12; border-width: 1px; font-size: 150%;" data-highlight-theme="github-gist"><pre class="python"><code>&gt;&gt;&gt; session.delete(new_user)
+<div class="sl-block" data-block-type="code" style="width: 641px; height: 173px; left: 160px; top: 317px;" data-block-id="9f90b2399bfca3529fa35abdc9da5bd7"><div class="sl-block-content" style="z-index: 12; border-width: 1px; font-size: 150%;" data-highlight-theme="ascetic"><pre class="python"><code>&gt;&gt;&gt; session.delete(new_user)
 
 &gt;&gt;&gt; session.query(User).\
 ...     filter_by(name='jasiek').count()
@@ -177,7 +177,7 @@
 
 		
 <script>
-	var SLConfig = {"current_user":{"id":431621,"username":"kierowcaautobusu","name":"Kierowca Autobusu","description":null,"thumbnail_url":"//graph.facebook.com/545449552286159/picture","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":271157,"present_controls":true,"present_upsizing":true,"present_notes":true,"editor_grid":true,"editor_snap":true,"developer_mode":false,"speaker_layout":null},"email":"matbur@poczta.fm","notify_on_receipt":true,"billing_address":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":1},"deck":{"id":865220,"slug":"sem-prez","title":"sem-prez","description":"","visibility":"all","published_at":"2016-11-27T09:22:07.594Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/7e3efb8275568b33bf8e831c56d23ca0/thumb.jpg","view_count":2,"user":{"id":431621,"username":"kierowcaautobusu","name":"Kierowca Autobusu","description":null,"thumbnail_url":"//graph.facebook.com/545449552286159/picture","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":271157,"present_controls":true,"present_upsizing":true,"present_notes":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"news","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":false,"forking_enabled":true,"rolling_links":false,"center":false,"should_loop":true,"share_notes":false,"slide_number":true,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1480416615419,"font_typekit":null,"font_google":null,"access_token":"xc9a4EAMkPrS4zK8K6xNUshXY38r","notes":{}}};
+	var SLConfig = {"current_user":{"id":431621,"username":"kierowcaautobusu","name":"Kierowca Autobusu","description":null,"thumbnail_url":"//graph.facebook.com/545449552286159/picture","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":271157,"present_controls":true,"present_upsizing":true,"present_notes":true,"editor_grid":true,"editor_snap":true,"developer_mode":false,"speaker_layout":null},"email":"matbur@poczta.fm","notify_on_receipt":true,"billing_address":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":1},"deck":{"id":865220,"slug":"sem-prez","title":"sem-prez","description":"","visibility":"all","published_at":"2016-11-27T09:22:07.594Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/7e3efb8275568b33bf8e831c56d23ca0/thumb.jpg","view_count":2,"user":{"id":431621,"username":"kierowcaautobusu","name":"Kierowca Autobusu","description":null,"thumbnail_url":"//graph.facebook.com/545449552286159/picture","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":271157,"present_controls":true,"present_upsizing":true,"present_notes":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"news","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":false,"forking_enabled":true,"rolling_links":false,"center":false,"should_loop":true,"share_notes":false,"slide_number":true,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1480511341023,"font_typekit":null,"font_google":null,"access_token":"xc9a4EAMkPrS4zK8K6xNUshXY38r","notes":{}}};
 </script>
 
 		<script>
